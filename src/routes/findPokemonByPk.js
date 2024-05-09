@@ -7,7 +7,7 @@ module.exports = (app) => {
         if (pokemon === null) {
           const message =
             "Le pokémon n'existe pas. Réessayez avec un autre identifiant";
-          return res.statut(404).json(message);
+          return res.status(404).json(message);
         }
         const message = "Un pokémon a bien été trouvé.";
         res.json({ message, data: pokemon });
