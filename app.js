@@ -20,6 +20,7 @@ require("./src/routes/findPokemonByPk")(app);
 require("./src/routes/createPokemon")(app);
 require("./src/routes/updatePokemon")(app);
 require("./src/routes/deletePokemon")(app);
+require("./src/routes/login")(app);
 
 // On ajoute la gestion des erreurs 404
 // Express va intercepter toutes les demandes du client qui ne correspondent pas à une route déclarée précedemment

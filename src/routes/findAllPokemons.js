@@ -1,9 +1,9 @@
 const { Pokemon } = require("../db/sequelize");
-const pokemons = require("../db/mock-pokemon");
 const { Op } = require("sequelize");
+const auth = require("../auth/auth");
 
 module.exports = (app) => {
-  app.get("/api/pokemons", (req, res) => {
+  app.get("/api/pokemons", auth, (req, res) => {
     if (req.query.name) {
       const name = req.query.name; //indique à Express qu'on souhaite recuperer le paramètre name de l'URL
 
